@@ -1,0 +1,10 @@
+﻿type,question,range
+slider,Insert Question Here 1,"1,21"
+slider,Insert Question Here 2,"1,21"
+slider,Insert Question Here 3,"1,21"
+slider,Insert Question Here 4,"1,21"
+slider,Insert Question Here 5,"1,21"
+slider,Insert Question Here 6,"1,21"
+slider,Insert Question Here 7,"1,10"
+slider,Insert Question Here 8,"1,10"
+slider,What? 9,"-180,180"

@@ -1,12 +1,9 @@
 import pandas as pd
 
-IMG_FILES = [  # list of image files in same directory. Order matters!
-    'T.jpg',
-    'G.jpg',
+IMG_FILES = [# list of image files in same directory
+    '0.jpg',
     '1.jpg',
     '2.jpg',
-    '3.jpg',
-    '3M.jpg',
     '4.jpg',
 ]
 FLOOR_DICT = {}
@@ -14,19 +11,18 @@ i = 0
 for name in IMG_FILES:
     FLOOR_DICT[i] = name[:name.find('.')]
     i += 1
-MARKERS = pd.read_csv('presets/marker_sequence.csv').iloc[:, 0].astype(
+MARKERS = pd.read_csv('markerSequence.csv').iloc[:, 0].astype(
     str).values.tolist()
-BUTTONS = pd.read_csv('presets/buttons.csv').iloc[:, 1].astype(
+BUTTONS = pd.read_csv('buttons.csv').iloc[:, 1].astype(
     str).values.tolist()
-VALIDATION_MODE = False
-SURVEY = pd.read_csv('presets/survey.csv')
+SURVEY = pd.read_csv('survey.csv')
 for i, marker in enumerate(MARKERS):
     MARKERS[i] = marker.title().replace('_', ' ')
 TASK_LIST_LENGTH = 20
 SIGN_LIST_LENGTH = 20
-LANDMARKS = pd.read_csv('presets/landmarks.csv')
+LANDMARK = pd.read_csv('landmarks.csv')
 LANDMARK_RADIUS = 40
-X, Y = (1050, 816)  # canvas size, 7:5 aspect ratio
+X, Y = (1050, 816)  # canvas size 7:5
 CURSOR_TYPE = "circle"  # defines cursor appearance when hovering over canvas
 CURSOR_OFFSET = 1  # adjust position of circle cursor for dot to be in center
 PLOT_SIZE = 3  # size of circle radius (in px)
@@ -44,3 +40,4 @@ BROWN = '#332100'
 BTN_HEIGHT = 2
 BTN_WIDTH = 10
 BTN_SPACING = 22
+URL = 'https://www.google.com/'
